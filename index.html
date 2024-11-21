@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="RoMo: Robust Motion Segmentation Improves Structure from Motion" content="DESCRIPTION META TAG">
+  <meta property="og:title" content="RoMo"/>
+  <meta property="og:description" content="Robust Motion Segmentation Improves Structure from Motion"/>
+  <meta property="og:url" content="URL OF THE WEBSITE"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/teaser.png" />
+  <meta property="og:image:width" content="1025"/>
+  <meta property="og:image:height" content="624"/>
+
+
+  <meta name="twitter:title" content="RoMo">
+  <meta name="twitter:description" content="Robust Motion Segmentation Improves Structure from Motion">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/teaser.png">
+  <meta name="twitter:card" content="Robust Motion Segmentation Improves Structure from Motion">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="SfM, Motion Segmentation">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>RoMo: Robust Motion Segmentation Improves Structure from Motion</title>
+  <link rel="icon" type="image/x-icon" href="static/images/romo.png">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">RoMo: Robust Motion Segmentation Improves Structure from Motion</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Teaser video-->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video poster="" id="tree" autoplay controls muted loop height="100%">
+        <!-- Your video here -->
+        <source src="static/videos/banner_video.mp4"
+        type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        We introduce a zero-shot motion segmentation method for video that leverages cues from epipolar geometry and optical flow. Our predicted masks enhance SfM camera calibration in highly dynamic scenes.
+      </h2>
+    </div>
+  </div>
+</section>
+<!-- End teaser video -->
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            There has been extensive progress in the reconstruction and generation of 4D scenes from monocular casually-captured video. While these tasks rely heavily on known camera poses, the problem of finding such poses using structure-from-motion (SfM) often depends on robustly separating static from dynamic parts of a video. The lack of a robust solution to this problem limits the performance of SfM camera-calibration pipelines. We propose a novel approach to video-based motion segmentation to identify the components of a scene that are moving w.r.t. a fixed world frame. Our simple but effective iterative method, RoMo, combines optical flow and epipolar cues with a pre-trained video segmentation model. It outperforms unsupervised baselines for motion segmentation as well as supervised baselines trained from synthetic data. More importantly, the combination of an off-the-shelf SfM pipeline with our segmentation masks establishes a new state-of-the-art on camera calibration for scenes with dynamic content, outperforming existing methods by a substantial margin.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+
+<!-- Video carousel -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">Examples of RoMo Motion Masks</h2>
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-video1">
+          <video poster="" id="video1" class="carousel-video" autoplay controls muted loop>
+            <!-- Your video file here -->
+            <source src="static/videos/carousel1.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video2">
+          <video poster="" id="video2" class="carousel-video" autoplay controls muted loop>
+            <!-- Your video file here -->
+            <source src="static/videos/carousel2.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video3">
+          <video poster="" id="video3" class="carousel-video" autoplay controls muted loop>
+            <!-- Your video file here -->
+            <source src="static/videos/carousel3.mp4" type="video/mp4">
+          </video>
+         </div>
+          <div class="item item-video4">
+          <video poster="" id="video4" class="carousel-video" autoplay controls muted loop>
+            <!-- Your video file here -->
+            <source src="static/videos/carousel4.mp4" type="video/mp4">
+          </video>  
+          </div>
+          <div class="item item-video5">
+          <video poster="" id="video5" class="carousel-video" autoplay controls muted loop>
+            <!-- Your video file here -->
+            <source src="static/videos/carousel5.mp4" type="video/mp4">
+          </video>  
+          </div>
+          <div class="item item-video6">
+          <video poster="" id="video6" class="carousel-video" autoplay controls muted loop>
+            <!-- Your video file here -->
+            <source src="static/videos/carousel6.mp4" type="video/mp4">
+          </video>  
+           </div>
+          <div class="item item-video7">
+          <video poster="" id="video7" class="carousel-video" autoplay controls muted loop>
+            <!-- Your video file here -->
+            <source src="static/videos/carousel7.mp4" type="video/mp4">
+          </video>  
+           </div>
+          <div class="item item-video8">
+          <video poster="" id="video8" class="carousel-video" autoplay controls muted loop>
+            <!-- Your video file here -->
+            <source src="static/videos/carousel8.mp4" type="video/mp4">
+          </video>  
+           </div>
+          <div class="item item-video9">
+          <video poster="" id="video9" class="carousel-video" autoplay controls muted loop>
+            <!-- Your video file here -->
+            <source src="static/videos/carousel9.mp4" type="video/mp4">
+          </video> 
+           </div> 
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End video carousel -->
+
+<style>
+  /* Ensures all videos in the carousel have the same width */
+  .carousel-video {
+    width: 100%;
+    max-width: 100%; /* Ensures the videos remain responsive */
+    height: auto; /* Maintains aspect ratio */
+    display: block; /* Ensures proper alignment behavior */
+    margin: auto; /* Centers videos horizontally */
+    object-fit: contain; /* Ensures the entire video is visible */
+  }
+
+  /* Adjusts the carousel layout */
+  #results-carousel {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 1rem; /* Adds spacing between videos */
+  }
+
+  /* Ensures all items are equally spaced and centered */
+  .item {
+    flex: 1; /* Ensures each item takes up equal width */
+    display: flex; /* Enables Flexbox for centering */
+    align-items: center; /* Centers videos vertically */
+    justify-content: center; /* Centers videos horizontally */
+    height: 100%; /* Ensures consistency across items */
+  }
+</style>
+
+
+
+<!-- Video comparison section -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full">
+        <h2 class="title is-3 has-text-centered">Video Comparisons</h2>
+       <p>Moving object segmentation results on DAVIS16, TrackSegv2 and FBMS 59. We show comparison of our zero-shot method against OCLR-adap, a motion segmentation approach which is fully supervised on synthetic datasets at training time and further adapted to the given videos at test-time. </p>
+      </div>
+    </div>
+
+    <!-- Row 1: Comparison Videos -->
+    <div class="columns is-centered">
+      <div class="column is-one-third has-text-centered">
+        <h3 class="subtitle is-5">Video</h3>
+        <video poster="" autoplay controls muted loop width="100%">
+          <source src="static/videos/DAVIS16/motocross.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="column is-one-third has-text-centered">
+        <h3 class="subtitle is-5">RoMo (ours)</h3>
+        <video poster="" autoplay controls muted loop width="100%">
+          <source src="static/videos/DAVIS16/motocross_ours.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="column is-one-third has-text-centered">
+        <h3 class="subtitle is-5">OCLR-adap</h3>
+        <video poster="" autoplay controls muted loop width="100%">
+          <source src="static/videos/DAVIS16/motocross_oclr.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+
+     <!-- Row 2: Comparison Videos -->
+    <div class="columns is-centered">
+      <div class="column is-one-third has-text-centered">
+        <h3 class="subtitle is-5">Video</h3>
+        <video poster="" autoplay controls muted loop width="100%">
+          <source src="static/videos/DAVIS16/dance.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="column is-one-third has-text-centered">
+        <h3 class="subtitle is-5">RoMo (ours)</h3>
+        <video poster="" autoplay controls muted loop width="100%">
+          <source src="static/videos/DAVIS16/dance_ours.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="column is-one-third has-text-centered">
+        <h3 class="subtitle is-5">OCLR-adap</h3>
+        <video poster="" autoplay controls muted loop width="100%">
+          <source src="static/videos/DAVIS16/dance_oclr.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+    
+     <!-- Row 3: Comparison Videos -->
+    <div class="columns is-centered">
+      <div class="column is-one-third has-text-centered">
+        <h3 class="subtitle is-5">Video</h3>
+        <video poster="" autoplay controls muted loop width="100%">
+          <source src="static/videos/DAVIS16/libby.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="column is-one-third has-text-centered">
+        <h3 class="subtitle is-5">RoMo (ours)</h3>
+        <video poster="" autoplay controls muted loop width="100%">
+          <source src="static/videos/DAVIS16/libby_ours.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="column is-one-third has-text-centered">
+        <h3 class="subtitle is-5">OCLR-adap</h3>
+        <video poster="" autoplay controls muted loop width="100%">
+          <source src="static/videos/DAVIS16/libby_oclr.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+
+     <!-- Row 4: Comparison Videos -->
+    <div class="columns is-centered">
+      <div class="column is-one-third has-text-centered">
+        <h3 class="subtitle is-5">Video</h3>
+        <video poster="" autoplay controls muted loop width="100%">
+          <source src="static/videos/DAVIS16/breakdance.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="column is-one-third has-text-centered">
+        <h3 class="subtitle is-5">RoMo (ours)</h3>
+        <video poster="" autoplay controls muted loop width="100%">
+          <source src="static/videos/DAVIS16/breakdance_ours.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="column is-one-third has-text-centered">
+        <h3 class="subtitle is-5">OCLR-adap</h3>
+        <video poster="" autoplay controls muted loop width="100%">
+          <source src="static/videos/DAVIS16/breakdance_oclr.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+
+
+    <!-- Row 5: Comparison Videos -->
+    <div class="columns is-centered">
+      <div class="column is-one-third has-text-centered">
+        <h3 class="subtitle is-5">Video</h3>
+        <video poster="" autoplay controls muted loop width="100%">
+          <source src="static/videos/FBMS/camel.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="column is-one-third has-text-centered">
+        <h3 class="subtitle is-5">RoMo (ours)</h3>
+        <video poster="" autoplay controls muted loop width="100%">
+          <source src="static/videos/FBMS/camel_ours.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="column is-one-third has-text-centered">
+        <h3 class="subtitle is-5">OCLR-adap</h3>
+        <video poster="" autoplay controls muted loop width="100%">
+          <source src="static/videos/FBMS/camel_oclr.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+
+    <!-- Row 6: Comparison Videos -->
+    <div class="columns is-centered">
+      <div class="column is-one-third has-text-centered">
+        <h3 class="subtitle is-5">Video</h3>
+        <video poster="" autoplay controls muted loop width="100%">
+          <source src="static/videos/FBMS/cars4.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="column is-one-third has-text-centered">
+        <h3 class="subtitle is-5">RoMo (ours)</h3>
+        <video poster="" autoplay controls muted loop width="100%">
+          <source src="static/videos/FBMS/cars4_ours.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="column is-one-third has-text-centered">
+        <h3 class="subtitle is-5">OCLR-adap</h3>
+        <video poster="" autoplay controls muted loop width="100%">
+          <source src="static/videos/FBMS/cars4_oclr.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+
+    <!-- Row 6: Comparison Videos -->
+    <div class="columns is-centered">
+      <div class="column is-one-third has-text-centered">
+        <h3 class="subtitle is-5">Video</h3>
+        <video poster="" autoplay controls muted loop width="100%">
+          <source src="static/videos/FBMS/horses.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="column is-one-third has-text-centered">
+        <h3 class="subtitle is-5">RoMo (ours)</h3>
+        <video poster="" autoplay controls muted loop width="100%">
+          <source src="static/videos/FBMS/horses_ours.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="column is-one-third has-text-centered">
+        <h3 class="subtitle is-5">OCLR-adap</h3>
+        <video poster="" autoplay controls muted loop width="100%">
+          <source src="static/videos/FBMS/horses_oclr.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+
+   <!-- Row 7: Comparison Videos -->
+    <div class="columns is-centered">
+      <div class="column is-one-third has-text-centered">
+        <h3 class="subtitle is-5">Video</h3>
+        <video poster="" autoplay controls muted loop width="100%">
+          <source src="static/videos/FBMS/people1.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="column is-one-third has-text-centered">
+        <h3 class="subtitle is-5">RoMo (ours)</h3>
+        <video poster="" autoplay controls muted loop width="100%">
+          <source src="static/videos/FBMS/people1_ours.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="column is-one-third has-text-centered">
+        <h3 class="subtitle is-5">OCLR-adap</h3>
+        <video poster="" autoplay controls muted loop width="100%">
+          <source src="static/videos/FBMS/people1_oclr.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+ 
+    <!-- Row 8: Comparison Videos -->
+    <div class="columns is-centered">
+      <div class="column is-one-third has-text-centered">
+        <h3 class="subtitle is-5">Video</h3>
+        <video poster="" autoplay controls muted loop width="100%">
+          <source src="static/videos/TrackSegv2/bmx.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="column is-one-third has-text-centered">
+        <h3 class="subtitle is-5">RoMo (ours)</h3>
+        <video poster="" autoplay controls muted loop width="100%">
+          <source src="static/videos/TrackSegv2/bmx_ours.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="column is-one-third has-text-centered">
+        <h3 class="subtitle is-5">OCLR-adap</h3>
+        <video poster="" autoplay controls muted loop width="100%">
+          <source src="static/videos/TrackSegv2/bmx_oclr.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+  
+    <!-- Row 9: Comparison Videos -->
+    <div class="columns is-centered">
+      <div class="column is-one-third has-text-centered">
+        <h3 class="subtitle is-5">Video</h3>
+        <video poster="" autoplay controls muted loop width="100%">
+          <source src="static/videos/TrackSegv2/worm.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="column is-one-third has-text-centered">
+        <h3 class="subtitle is-5">RoMo (ours)</h3>
+        <video poster="" autoplay controls muted loop width="100%">
+          <source src="static/videos/TrackSegv2/worm_ours.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="column is-one-third has-text-centered">
+        <h3 class="subtitle is-5">OCLR-adap</h3>
+        <video poster="" autoplay controls muted loop width="100%">
+          <source src="static/videos/TrackSegv2/worm_oclr.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+    
+    <!-- Row 10: Comparison Videos -->
+    <div class="columns is-centered">
+      <div class="column is-one-third has-text-centered">
+        <h3 class="subtitle is-5">Video</h3>
+        <video poster="" autoplay controls muted loop width="100%">
+          <source src="static/videos/TrackSegv2/hummingbird.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="column is-one-third has-text-centered">
+        <h3 class="subtitle is-5">RoMo (ours)</h3>
+        <video poster="" autoplay controls muted loop width="100%">
+          <source src="static/videos/TrackSegv2/hummingbird_ours.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="column is-one-third has-text-centered">
+        <h3 class="subtitle is-5">OCLR-adap</h3>
+        <video poster="" autoplay controls muted loop width="100%">
+          <source src="static/videos/TrackSegv2/hummingbird_oclr.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+    <!-- Additional rows can be added as needed -->
+  </div>
+</section>
+<!-- End video comparison section -->
+
+
+<!-- Camera and Motion Masks Section -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Camera and Motion Masks on Casual Motion Dataset</h2>
+    <div class="content">
+
+      <!-- Row 1 -->
+      <div class="columns is-vcentered row">
+        <!-- Image Column -->
+        <div class="column is-7">
+          <img src="static/videos/CasualMotion/bike.svg" alt="Description">
+          <p class="has-text-centered">camera comparison. GT: <span style="color: #1c9099;">—</span>, Estimate: <span style="color: #c51b8a;">---</span> </p>
+        </div>
+        <!-- Video Column -->
+        <div class="column is-2.5">
+          <video class="comparison-video" autoplay controls muted loop>
+            <source src="static/videos/CasualMotion/bike.mp4" type="video/mp4">
+          </video>
+          <p class="has-text-centered">Video</p>
+        </div>
+        <!-- RoMo Column -->
+        <div class="column is-2.5">
+          <video class="comparison-video" autoplay controls muted loop>
+            <source src="static/videos/CasualMotion/bike_ours.mp4" type="video/mp4">
+          </video>
+          <p class="has-text-centered">RoMo (Ours)</p>
+        </div>
+      </div>
+      
+      <!-- Row 1 -->
+      <div class="columns is-vcentered row">
+        <!-- Image Column -->
+        <div class="column is-7">
+          <img src="static/videos/CasualMotion/stairs.svg" alt="Description">
+          <p class="has-text-centered">camera comparison. GT: <span style="color: #1c9099;">—</span>, Estimate: <span style="color: #c51b8a;">---</span> </p>
+        </div>
+        <!-- Video Column -->
+        <div class="column is-2.5">
+          <video class="comparison-video" autoplay controls muted loop>
+            <source src="static/videos/CasualMotion/stairs.mp4" type="video/mp4">
+          </video>
+          <p class="has-text-centered">Video</p>
+        </div>
+        <!-- RoMo Column -->
+        <div class="column is-2.5">
+          <video class="comparison-video" autoplay controls muted loop>
+            <source src="static/videos/CasualMotion/stairs_ours.mp4" type="video/mp4">
+          </video>
+          <p class="has-text-centered">RoMo (Ours)</p>
+        </div>
+      </div>
+
+       <!-- Row 2 -->
+      <div class="columns is-vcentered row">
+        <!-- Image Column -->
+        <div class="column is-7">
+          <img src="static/videos/CasualMotion/money.svg" alt="Description">
+          <p class="has-text-centered">camera comparison. GT: <span style="color: #1c9099;">—</span>, Estimate: <span style="color: #c51b8a;">---</span> </p>
+        </div>
+        <!-- Video Column -->
+        <div class="column is-2.5">
+          <video class="comparison-video" autoplay controls muted loop>
+            <source src="static/videos/CasualMotion/money.mp4" type="video/mp4">
+          </video>
+          <p class="has-text-centered">Video</p>
+        </div>
+        <!-- RoMo Column -->
+        <div class="column is-2.5">
+          <video class="comparison-video" autoplay controls muted loop>
+            <source src="static/videos/CasualMotion/money_ours.mp4" type="video/mp4">
+          </video>
+          <p class="has-text-centered">RoMo (Ours)</p>
+        </div>
+      </div>
+ 
+       <!-- Row 4 -->
+      <div class="columns is-vcentered row">
+        <!-- Image Column -->
+        <div class="column is-7">
+          <img src="static/videos/CasualMotion/umbrella.svg" alt="Description">
+          <p class="has-text-centered">camera comparison. GT: <span style="color: #1c9099;">—</span>, Estimate: <span style="color: #c51b8a;">---</span> </p>
+        </div>
+        <!-- Video Column -->
+        <div class="column is-2.5">
+          <video class="comparison-video" autoplay controls muted loop>
+            <source src="static/videos/CasualMotion/umbrella.mp4" type="video/mp4">
+          </video>
+          <p class="has-text-centered">Video</p>
+        </div>
+        <!-- RoMo Column -->
+        <div class="column is-2.5">
+          <video class="comparison-video" autoplay controls muted loop>
+            <source src="static/videos/CasualMotion/umbrella_ours.mp4" type="video/mp4">
+          </video>
+          <p class="has-text-centered">RoMo (Ours)</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Ensures videos and images align properly */
+  .comparison-video {
+    width: 100%; /* Ensures the video takes up the full width of its column */
+    height: auto;
+  }
+
+  .thin-image {
+    width: auto; /* Image scales responsively within its column */
+    height: auto; /* Keeps the aspect ratio */
+    object-fit: contain; /* Makes sure the image doesn’t stretch */
+  }
+
+  .row {
+    margin-bottom: 2rem; /* Adds space between rows */
+  }
+</style>
+
+
+  </body>
+  </html>
