@@ -199,358 +199,552 @@
     <div class="columns is-centered">
       <div class="column is-full">
         <h2 class="title is-3 has-text-centered">Video Comparisons</h2>
-       <p>Moving object segmentation results on DAVIS16, TrackSegv2 and FBMS 59. We show comparison of our zero-shot method against OCLR-adap, a motion segmentation approach which is fully supervised on synthetic datasets at training time and further adapted to the given videos at test-time. </p>
+       <p>Moving object segmentation results on DAVIS16, TrackSegv2 and FBMS 59. We show comparison of our <b><u>zero-shot</u></b> method against OCLR-adap, a motion segmentation approach which is <b><u>fully supervised</u></b> on synthetic datasets at training time and further adapted to the given videos at test-time. </p>
       </div>
     </div>
 
-    <!-- Row 1: Comparison Videos -->
-    <div class="columns is-centered">
+    <!-- Row 1: Synchronized Comparison Videos -->
+    <div class="columns is-centered" style="margin-bottom: 0.05rem;">
       <div class="column is-one-third has-text-centered">
-        <h3 class="subtitle is-5">Video</h3>
-        <video poster="" autoplay controls muted loop width="100%">
+        <h3 class="subtitle is-5">Input Video</h3>
+        <video class="row-video" id="row-video1" controls muted loop width="100%">
           <source src="static/videos/DAVIS16/motocross.mp4" type="video/mp4">
         </video>
       </div>
       <div class="column is-one-third has-text-centered">
         <h3 class="subtitle is-5">RoMo (ours)</h3>
-        <video poster="" autoplay controls muted loop width="100%">
+        <video class="row-video" id="row-video1" controls muted loop width="100%">
           <source src="static/videos/DAVIS16/motocross_ours.mp4" type="video/mp4">
         </video>
       </div>
       <div class="column is-one-third has-text-centered">
         <h3 class="subtitle is-5">OCLR-adap</h3>
-        <video poster="" autoplay controls muted loop width="100%">
+        <video class="row-video" id="row-video1" controls muted loop width="100%">
           <source src="static/videos/DAVIS16/motocross_oclr.mp4" type="video/mp4">
         </video>
       </div>
     </div>
+    <div class="has-text-centered">
+      <button class="button is-primary is-small play-pause-btn" id="play-pause-btn1" style="margin-bottom: 0.25rem;">Play</button>
+      <button class="button is-primary is-small restart-btn" id="restart-btn1" style="margin-bottom: 0.25rem;">Restart</button>
+    </div>
 
-     <!-- Row 2: Comparison Videos -->
-    <div class="columns is-centered">
+    <!-- Row 2: Synchronized Comparison Videos -->
+    <div class="columns is-centered" style="margin-bottom: 0.05rem;">
       <div class="column is-one-third has-text-centered">
-        <h3 class="subtitle is-5">Video</h3>
-        <video poster="" autoplay controls muted loop width="100%">
+        <h3 class="subtitle is-5">Input Video</h3>
+        <video class="row-video" id="row-video2" controls muted loop width="100%">
           <source src="static/videos/DAVIS16/dance.mp4" type="video/mp4">
         </video>
       </div>
       <div class="column is-one-third has-text-centered">
         <h3 class="subtitle is-5">RoMo (ours)</h3>
-        <video poster="" autoplay controls muted loop width="100%">
+        <video class="row-video" id="row-video2" controls muted loop width="100%">
           <source src="static/videos/DAVIS16/dance_ours.mp4" type="video/mp4">
         </video>
       </div>
       <div class="column is-one-third has-text-centered">
         <h3 class="subtitle is-5">OCLR-adap</h3>
-        <video poster="" autoplay controls muted loop width="100%">
+        <video class="row-video" id="row-video2" controls muted loop width="100%">
           <source src="static/videos/DAVIS16/dance_oclr.mp4" type="video/mp4">
         </video>
       </div>
     </div>
-    
+    <div class="has-text-centered">
+      <button class="button is-primary is-small play-pause-btn" id="play-pause-btn2" style="margin-bottom: 0.25rem;">Play</button>
+      <button class="button is-primary is-small restart-btn" id="restart-btn2" style="margin-bottom: 0.25rem;">Restart</button>
+    </div>    
      <!-- Row 3: Comparison Videos -->
-    <div class="columns is-centered">
+    <div class="columns is-centered" style="margin-bottom: 0.05rem;">
       <div class="column is-one-third has-text-centered">
-        <h3 class="subtitle is-5">Video</h3>
-        <video poster="" autoplay controls muted loop width="100%">
+        <h3 class="subtitle is-5">Input Video</h3>
+        <video class="row-video" id="row-video3" controls muted loop width="100%">
           <source src="static/videos/DAVIS16/libby.mp4" type="video/mp4">
         </video>
       </div>
       <div class="column is-one-third has-text-centered">
         <h3 class="subtitle is-5">RoMo (ours)</h3>
-        <video poster="" autoplay controls muted loop width="100%">
+        <video class="row-video" id="row-video3" controls muted loop width="100%">
           <source src="static/videos/DAVIS16/libby_ours.mp4" type="video/mp4">
         </video>
       </div>
       <div class="column is-one-third has-text-centered">
         <h3 class="subtitle is-5">OCLR-adap</h3>
-        <video poster="" autoplay controls muted loop width="100%">
+        <video class="row-video" id="row-video3" controls muted loop width="100%">
           <source src="static/videos/DAVIS16/libby_oclr.mp4" type="video/mp4">
         </video>
       </div>
     </div>
+    <div class="has-text-centered">
+      <button class="button is-primary is-small play-pause-btn" id="play-pause-btn3" style="margin-bottom: 0.25rem;">Play</button>
+      <button class="button is-primary is-small restart-btn" id="restart-btn3" style="margin-bottom: 0.25rem;">Restart</button>
+    </div>
 
      <!-- Row 4: Comparison Videos -->
-    <div class="columns is-centered">
+    <div class="columns is-centered" style="margin-bottom: 0.05rem;">
       <div class="column is-one-third has-text-centered">
-        <h3 class="subtitle is-5">Video</h3>
-        <video poster="" autoplay controls muted loop width="100%">
+        <h3 class="subtitle is-5">Input Video</h3>
+        <video class="row-video" id="row-video4" controls muted loop width="100%">
           <source src="static/videos/DAVIS16/breakdance.mp4" type="video/mp4">
         </video>
       </div>
       <div class="column is-one-third has-text-centered">
         <h3 class="subtitle is-5">RoMo (ours)</h3>
-        <video poster="" autoplay controls muted loop width="100%">
+        <video class="row-video" id="row-video4" controls muted loop width="100%">
           <source src="static/videos/DAVIS16/breakdance_ours.mp4" type="video/mp4">
         </video>
       </div>
       <div class="column is-one-third has-text-centered">
         <h3 class="subtitle is-5">OCLR-adap</h3>
-        <video poster="" autoplay controls muted loop width="100%">
+        <video class="row-video" id="row-video4" controls muted loop width="100%">
           <source src="static/videos/DAVIS16/breakdance_oclr.mp4" type="video/mp4">
         </video>
       </div>
     </div>
+    <div class="has-text-centered">
+      <button class="button is-primary is-small play-pause-btn" id="play-pause-btn4" style="margin-bottom: 0.25rem;">Play</button>
+      <button class="button is-primary is-small restart-btn" id="restart-btn4" style="margin-bottom: 0.25rem;">Restart</button>
+    </div>
 
 
-    <!-- Row 5: Comparison Videos -->
-    <div class="columns is-centered">
+ <!-- Row 5: Comparison Videos -->
+    <div class="columns is-centered" style="margin-bottom: 0.05rem;">
       <div class="column is-one-third has-text-centered">
-        <h3 class="subtitle is-5">Video</h3>
-        <video poster="" autoplay controls muted loop width="100%">
+        <h3 class="subtitle is-5">Input Video</h3>
+        <video class="row-video" id="row-video5" controls muted loop width="100%">
           <source src="static/videos/FBMS/camel.mp4" type="video/mp4">
         </video>
       </div>
       <div class="column is-one-third has-text-centered">
         <h3 class="subtitle is-5">RoMo (ours)</h3>
-        <video poster="" autoplay controls muted loop width="100%">
+        <video class="row-video" id="row-video5" controls muted loop width="100%">
           <source src="static/videos/FBMS/camel_ours.mp4" type="video/mp4">
         </video>
       </div>
       <div class="column is-one-third has-text-centered">
         <h3 class="subtitle is-5">OCLR-adap</h3>
-        <video poster="" autoplay controls muted loop width="100%">
+        <video class="row-video" id="row-video5" controls muted loop width="100%">
           <source src="static/videos/FBMS/camel_oclr.mp4" type="video/mp4">
         </video>
       </div>
     </div>
+    <div class="has-text-centered">
+      <button class="button is-primary is-small play-pause-btn" id="play-pause-btn5" style="margin-bottom: 0.25rem;">Play</button>
+      <button class="button is-primary is-small restart-btn" id="restart-btn5" style="margin-bottom: 0.25rem;">Restart</button>
+    </div>
 
-    <!-- Row 6: Comparison Videos -->
-    <div class="columns is-centered">
+ <!-- Row 6: Comparison Videos -->
+    <div class="columns is-centered" style="margin-bottom: 0.05rem;">
       <div class="column is-one-third has-text-centered">
-        <h3 class="subtitle is-5">Video</h3>
-        <video poster="" autoplay controls muted loop width="100%">
+        <h3 class="subtitle is-5">Input Video</h3>
+        <video class="row-video" id="row-video6" controls muted loop width="100%">
           <source src="static/videos/FBMS/cars4.mp4" type="video/mp4">
         </video>
       </div>
       <div class="column is-one-third has-text-centered">
         <h3 class="subtitle is-5">RoMo (ours)</h3>
-        <video poster="" autoplay controls muted loop width="100%">
+        <video class="row-video" id="row-video6" controls muted loop width="100%">
           <source src="static/videos/FBMS/cars4_ours.mp4" type="video/mp4">
         </video>
       </div>
       <div class="column is-one-third has-text-centered">
         <h3 class="subtitle is-5">OCLR-adap</h3>
-        <video poster="" autoplay controls muted loop width="100%">
+        <video class="row-video" id="row-video6" controls muted loop width="100%">
           <source src="static/videos/FBMS/cars4_oclr.mp4" type="video/mp4">
         </video>
       </div>
     </div>
+    <div class="has-text-centered">
+      <button class="button is-primary is-small play-pause-btn" id="play-pause-btn6" style="margin-bottom: 0.25rem;">Play</button>
+      <button class="button is-primary is-small restart-btn" id="restart-btn6" style="margin-bottom: 0.25rem;">Restart</button>
+    </div>
 
-    <!-- Row 6: Comparison Videos -->
-    <div class="columns is-centered">
+   <!-- Row 7: Comparison Videos -->
+    <div class="columns is-centered" style="margin-bottom: 0.05rem;">
       <div class="column is-one-third has-text-centered">
-        <h3 class="subtitle is-5">Video</h3>
-        <video poster="" autoplay controls muted loop width="100%">
+        <h3 class="subtitle is-5">Input Video</h3>
+        <video class="row-video" id="row-video7" controls muted loop width="100%">
           <source src="static/videos/FBMS/horses.mp4" type="video/mp4">
         </video>
       </div>
       <div class="column is-one-third has-text-centered">
         <h3 class="subtitle is-5">RoMo (ours)</h3>
-        <video poster="" autoplay controls muted loop width="100%">
+        <video class="row-video" id="row-video7" controls muted loop width="100%">
           <source src="static/videos/FBMS/horses_ours.mp4" type="video/mp4">
         </video>
       </div>
       <div class="column is-one-third has-text-centered">
         <h3 class="subtitle is-5">OCLR-adap</h3>
-        <video poster="" autoplay controls muted loop width="100%">
+        <video class="row-video" id="row-video7" controls muted loop width="100%">
           <source src="static/videos/FBMS/horses_oclr.mp4" type="video/mp4">
         </video>
       </div>
     </div>
+    <div class="has-text-centered">
+      <button class="button is-primary is-small play-pause-btn" id="play-pause-btn7" style="margin-bottom: 0.25rem;">Play</button>
+      <button class="button is-primary is-small restart-btn" id="restart-btn7" style="margin-bottom: 0.25rem;">Restart</button>
+    </div>
 
-   <!-- Row 7: Comparison Videos -->
-    <div class="columns is-centered">
+
+   <!-- Row 8: Comparison Videos -->
+    <div class="columns is-centered" style="margin-bottom: 0.05rem;">
       <div class="column is-one-third has-text-centered">
-        <h3 class="subtitle is-5">Video</h3>
-        <video poster="" autoplay controls muted loop width="100%">
+        <h3 class="subtitle is-5">Input Video</h3>
+        <video class="row-video" id="row-video8" controls muted loop width="100%">
           <source src="static/videos/FBMS/people1.mp4" type="video/mp4">
         </video>
       </div>
       <div class="column is-one-third has-text-centered">
         <h3 class="subtitle is-5">RoMo (ours)</h3>
-        <video poster="" autoplay controls muted loop width="100%">
+        <video class="row-video" id="row-video8" controls muted loop width="100%">
           <source src="static/videos/FBMS/people1_ours.mp4" type="video/mp4">
         </video>
       </div>
       <div class="column is-one-third has-text-centered">
         <h3 class="subtitle is-5">OCLR-adap</h3>
-        <video poster="" autoplay controls muted loop width="100%">
+        <video class="row-video" id="row-video8" controls muted loop width="100%">
           <source src="static/videos/FBMS/people1_oclr.mp4" type="video/mp4">
         </video>
       </div>
     </div>
+    <div class="has-text-centered">
+      <button class="button is-primary is-small play-pause-btn" id="play-pause-btn8" style="margin-bottom: 0.25rem;">Play</button>
+      <button class="button is-primary is-small restart-btn" id="restart-btn8" style="margin-bottom: 0.25rem;">Restart</button>
+    </div>
  
-    <!-- Row 8: Comparison Videos -->
-    <div class="columns is-centered">
+    <!-- Row 9: Comparison Videos -->
+    <div class="columns is-centered" style="margin-bottom: 0.05rem;">
       <div class="column is-one-third has-text-centered">
-        <h3 class="subtitle is-5">Video</h3>
-        <video poster="" autoplay controls muted loop width="100%">
+        <h3 class="subtitle is-5">Input Video</h3>
+        <video class="row-video" id="row-video9" controls muted loop width="100%">
           <source src="static/videos/TrackSegv2/bmx.mp4" type="video/mp4">
         </video>
       </div>
       <div class="column is-one-third has-text-centered">
         <h3 class="subtitle is-5">RoMo (ours)</h3>
-        <video poster="" autoplay controls muted loop width="100%">
+        <video class="row-video" id="row-video9" controls muted loop width="100%">
           <source src="static/videos/TrackSegv2/bmx_ours.mp4" type="video/mp4">
         </video>
       </div>
       <div class="column is-one-third has-text-centered">
         <h3 class="subtitle is-5">OCLR-adap</h3>
-        <video poster="" autoplay controls muted loop width="100%">
+        <video class="row-video" id="row-video9" controls muted loop width="100%">
           <source src="static/videos/TrackSegv2/bmx_oclr.mp4" type="video/mp4">
         </video>
       </div>
     </div>
+    <div class="has-text-centered">
+      <button class="button is-primary is-small play-pause-btn" id="play-pause-btn9" style="margin-bottom: 0.25rem;">Play</button>
+      <button class="button is-primary is-small restart-btn" id="restart-btn9" style="margin-bottom: 0.25rem;">Restart</button>
+    </div>
   
-    <!-- Row 9: Comparison Videos -->
-    <div class="columns is-centered">
+    <!-- Row 10: Comparison Videos -->
+    <div class="columns is-centered" style="margin-bottom: 0.05rem;">
       <div class="column is-one-third has-text-centered">
-        <h3 class="subtitle is-5">Video</h3>
-        <video poster="" autoplay controls muted loop width="100%">
+        <h3 class="subtitle is-5">Input Video</h3>
+        <video class="row-video" id="row-video10" controls muted loop width="100%">
           <source src="static/videos/TrackSegv2/worm.mp4" type="video/mp4">
         </video>
       </div>
       <div class="column is-one-third has-text-centered">
         <h3 class="subtitle is-5">RoMo (ours)</h3>
-        <video poster="" autoplay controls muted loop width="100%">
+        <video class="row-video" id="row-video10" controls muted loop width="100%">
           <source src="static/videos/TrackSegv2/worm_ours.mp4" type="video/mp4">
         </video>
       </div>
       <div class="column is-one-third has-text-centered">
         <h3 class="subtitle is-5">OCLR-adap</h3>
-        <video poster="" autoplay controls muted loop width="100%">
+        <video class="row-video" id="row-video10" controls muted loop width="100%">
           <source src="static/videos/TrackSegv2/worm_oclr.mp4" type="video/mp4">
         </video>
       </div>
     </div>
+    <div class="has-text-centered">
+      <button class="button is-primary is-small play-pause-btn" id="play-pause-btn10" style="margin-bottom: 0.25rem;">Play</button>
+      <button class="button is-primary is-small restart-btn" id="restart-btn10" style="margin-bottom: 0.25rem;">Restart</button>
+    </div>
     
-    <!-- Row 10: Comparison Videos -->
-    <div class="columns is-centered">
+    <!-- Row 11: Comparison Videos -->
+    <div class="columns is-centered" style="margin-bottom: 0.05rem;">
       <div class="column is-one-third has-text-centered">
-        <h3 class="subtitle is-5">Video</h3>
-        <video poster="" autoplay controls muted loop width="100%">
+        <h3 class="subtitle is-5">Input Video</h3>
+        <video class="row-video" id="row-video11" controls muted loop width="100%">
           <source src="static/videos/TrackSegv2/hummingbird.mp4" type="video/mp4">
         </video>
       </div>
       <div class="column is-one-third has-text-centered">
         <h3 class="subtitle is-5">RoMo (ours)</h3>
-        <video poster="" autoplay controls muted loop width="100%">
+        <video class="row-video" id="row-video11" controls muted loop width="100%">
           <source src="static/videos/TrackSegv2/hummingbird_ours.mp4" type="video/mp4">
         </video>
       </div>
       <div class="column is-one-third has-text-centered">
         <h3 class="subtitle is-5">OCLR-adap</h3>
-        <video poster="" autoplay controls muted loop width="100%">
+        <video class="row-video" id="row-video11" controls muted loop width="100%">
           <source src="static/videos/TrackSegv2/hummingbird_oclr.mp4" type="video/mp4">
         </video>
       </div>
     </div>
+    <div class="has-text-centered">
+      <button class="button is-primary is-small play-pause-btn" id="play-pause-btn11" style="margin-bottom: 0.25rem;">Play</button>
+      <button class="button is-primary is-small restart-btn" id="restart-btn11" style="margin-bottom: 0.25rem;">Restart</button>
+    </div>
+
     <!-- Additional rows can be added as needed -->
   </div>
 </section>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    // Function to sync and play all videos in a row
+    function syncAndPlayVideos(rowIndex) {
+      const videos = document.querySelectorAll(`#row-video${rowIndex}`); // Get videos for the row
+      const currentTime = videos[0].currentTime; // Get current time of the first video in the row
+
+      // Sync all videos in the row to the same time and play them
+      videos.forEach(video => {
+        video.currentTime = currentTime;
+        video.play();
+      });
+    }
+
+    // Function to toggle play/pause for each row
+    function togglePlayPause(rowIndex) {
+      const videos = document.querySelectorAll(`#row-video${rowIndex}`);
+      const playPauseBtn = document.querySelector(`#play-pause-btn${rowIndex}`);
+      let isPlaying = playPauseBtn.textContent === "Pause"; // Determine if the videos are playing
+
+      // Play or pause the videos based on current state
+      if (isPlaying) {
+        videos.forEach(video => video.pause());
+        playPauseBtn.textContent = "Play";
+      } else {
+        syncAndPlayVideos(rowIndex);
+        playPauseBtn.textContent = "Pause";
+      }
+    }
+
+    // Function to restart all videos in a row
+    function restartVideos(rowIndex) {
+      const videos = document.querySelectorAll(`#row-video${rowIndex}`);
+      videos.forEach(video => {
+        video.currentTime = 0; // Reset to the beginning
+        video.play(); // Play the video again
+      });
+      const playPauseBtn = document.querySelector(`#play-pause-btn${rowIndex}`);
+      playPauseBtn.textContent = "Pause"; // Ensure play/pause button shows "Pause"
+    }
+
+    // Add event listeners to each play/pause button for its respective row
+    const playPauseBtns = document.querySelectorAll(".play-pause-btn");
+    playPauseBtns.forEach((button, index) => {
+      button.addEventListener("click", () => {
+        const rowIndex = index + 1; // Row index is 1-based (for row-video1, row-video2, etc.)
+        togglePlayPause(rowIndex);
+      });
+    });
+
+    // Add event listeners to each restart button for its respective row
+    const restartBtns = document.querySelectorAll(".restart-btn");
+    restartBtns.forEach((button, index) => {
+      button.addEventListener("click", () => {
+        const rowIndex = index + 1; // Row index is 1-based
+        restartVideos(rowIndex);
+      });
+    });
+
+    // Initially play all videos in the rows, and set the buttons to "Pause"
+    syncAndPlayVideos(1); // Play videos in the first row by default
+    syncAndPlayVideos(2); // Play videos in the second row by default
+    syncAndPlayVideos(3); // Play videos in the third row by default 
+    syncAndPlayVideos(4); // Play videos in the fourth row by default
+    syncAndPlayVideos(5); // Play videos in the fifth row by default
+    syncAndPlayVideos(6); // Play videos in the sixth row by default
+    syncAndPlayVideos(7); // Play videos in the seventh row by default
+    syncAndPlayVideos(8); // Play videos in the eighth row by default
+    syncAndPlayVideos(9); // Play videos in the ninth row by default
+    syncAndPlayVideos(10); // Play videos in the tenth row by default
+    syncAndPlayVideos(11); // Play videos in the eleventh row by default
+    syncAndPlayVideos(12); // Play videos in the eleventh row by default
+    syncAndPlayVideos(13); // Play videos in the eleventh row by default
+    syncAndPlayVideos(14); // Play videos in the eleventh row by default
+    syncAndPlayVideos(15); // Play videos in the eleventh row by default
+
+    // Update button text to "Pause" after starting the videos
+    document.querySelector(`#play-pause-btn1`).textContent = "Pause";
+    document.querySelector(`#play-pause-btn2`).textContent = "Pause";
+    document.querySelector(`#play-pause-btn3`).textContent = "Pause";
+    document.querySelector(`#play-pause-btn4`).textContent = "Pause";
+    document.querySelector(`#play-pause-btn5`).textContent = "Pause";
+    document.querySelector(`#play-pause-btn6`).textContent = "Pause";
+    document.querySelector(`#play-pause-btn7`).textContent = "Pause";
+    document.querySelector(`#play-pause-btn8`).textContent = "Pause";
+    document.querySelector(`#play-pause-btn9`).textContent = "Pause";
+    document.querySelector(`#play-pause-btn10`).textContent = "Pause";
+    document.querySelector(`#play-pause-btn11`).textContent = "Pause";
+    document.querySelector(`#play-pause-btn12`).textContent = "Pause";
+    document.querySelector(`#play-pause-btn13`).textContent = "Pause";
+    document.querySelector(`#play-pause-btn14`).textContent = "Pause";
+    document.querySelector(`#play-pause-btn15`).textContent = "Pause";
+  });
+</script>
+
+
+
 <!-- End video comparison section -->
 
 
 <!-- Camera and Motion Masks Section -->
 <section class="section hero is-light">
   <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered">Camera and Motion Masks on Casual Motion Dataset</h2>
+    <h2 class="title is-3 has-text-centered">Estimated Camera Trajectories and Motion Masks on Casual Motion Dataset</h2>
     <div class="content">
 
       <!-- Row 1 -->
-      <div class="columns is-vcentered row">
-        <!-- Image Column -->
-        <div class="column is-7">
-          <img src="static/videos/CasualMotion/bike.svg" alt="Description">
-          <p class="has-text-centered">camera comparison. GT: <span style="color: #1c9099;">—</span>, Estimate: <span style="color: #c51b8a;">---</span> </p>
-        </div>
-        <!-- Video Column -->
-        <div class="column is-2.5">
-          <video class="comparison-video" autoplay controls muted loop>
-            <source src="static/videos/CasualMotion/bike.mp4" type="video/mp4">
-          </video>
-          <p class="has-text-centered">Video</p>
-        </div>
-        <!-- RoMo Column -->
-        <div class="column is-2.5">
-          <video class="comparison-video" autoplay controls muted loop>
-            <source src="static/videos/CasualMotion/bike_ours.mp4" type="video/mp4">
-          </video>
-          <p class="has-text-centered">RoMo (Ours)</p>
-        </div>
+<div class="columns is-vcentered row">
+  <!-- Image Column -->
+  <div class="column is-7">
+    <img src="static/videos/CasualMotion/bike.svg" alt="Description">
+    <p class="has-text-centered">camera comparison. GT: <span style="color: #1c9099;">—</span>, Estimate: <span style="color: #c51b8a;">---</span> </p>
+  </div>
+
+  <!-- Video Columns and Buttons Container (Both in the same row) -->
+  <div class="column is-5">
+    <div class="columns">
+      <!-- Video Column 1 -->
+      <div class="column is-6">
+         <p class="has-text-centered">Input Video</p>
+        <video class="row-video" id="row-video12" controls muted loop width="100%">
+          <source src="static/videos/CasualMotion/bike.mp4" type="video/mp4">
+        </video>
       </div>
       
-      <!-- Row 1 -->
-      <div class="columns is-vcentered row">
-        <!-- Image Column -->
-        <div class="column is-7">
-          <img src="static/videos/CasualMotion/stairs.svg" alt="Description">
-          <p class="has-text-centered">camera comparison. GT: <span style="color: #1c9099;">—</span>, Estimate: <span style="color: #c51b8a;">---</span> </p>
-        </div>
-        <!-- Video Column -->
-        <div class="column is-2.5">
-          <video class="comparison-video" autoplay controls muted loop>
-            <source src="static/videos/CasualMotion/stairs.mp4" type="video/mp4">
-          </video>
-          <p class="has-text-centered">Video</p>
-        </div>
-        <!-- RoMo Column -->
-        <div class="column is-2.5">
-          <video class="comparison-video" autoplay controls muted loop>
-            <source src="static/videos/CasualMotion/stairs_ours.mp4" type="video/mp4">
-          </video>
-          <p class="has-text-centered">RoMo (Ours)</p>
-        </div>
+      <!-- Video Column 2 -->
+      <div class="column is-6">
+	<p class="has-text-centered">RoMo (Ours)</p>
+        <video class="row-video" id="row-video12" controls muted loop width="100%">
+          <source src="static/videos/CasualMotion/bike_ours.mp4" type="video/mp4">
+        </video>
       </div>
+    </div>
 
-       <!-- Row 2 -->
-      <div class="columns is-vcentered row">
-        <!-- Image Column -->
-        <div class="column is-7">
-          <img src="static/videos/CasualMotion/money.svg" alt="Description">
-          <p class="has-text-centered">camera comparison. GT: <span style="color: #1c9099;">—</span>, Estimate: <span style="color: #c51b8a;">---</span> </p>
-        </div>
-        <!-- Video Column -->
-        <div class="column is-2.5">
-          <video class="comparison-video" autoplay controls muted loop>
-            <source src="static/videos/CasualMotion/money.mp4" type="video/mp4">
-          </video>
-          <p class="has-text-centered">Video</p>
-        </div>
-        <!-- RoMo Column -->
-        <div class="column is-2.5">
-          <video class="comparison-video" autoplay controls muted loop>
-            <source src="static/videos/CasualMotion/money_ours.mp4" type="video/mp4">
-          </video>
-          <p class="has-text-centered">RoMo (Ours)</p>
-        </div>
-      </div>
- 
-       <!-- Row 4 -->
-      <div class="columns is-vcentered row">
-        <!-- Image Column -->
-        <div class="column is-7">
-          <img src="static/videos/CasualMotion/umbrella.svg" alt="Description">
-          <p class="has-text-centered">camera comparison. GT: <span style="color: #1c9099;">—</span>, Estimate: <span style="color: #c51b8a;">---</span> </p>
-        </div>
-        <!-- Video Column -->
-        <div class="column is-2.5">
-          <video class="comparison-video" autoplay controls muted loop>
-            <source src="static/videos/CasualMotion/umbrella.mp4" type="video/mp4">
-          </video>
-          <p class="has-text-centered">Video</p>
-        </div>
-        <!-- RoMo Column -->
-        <div class="column is-2.5">
-          <video class="comparison-video" autoplay controls muted loop>
-            <source src="static/videos/CasualMotion/umbrella_ours.mp4" type="video/mp4">
-          </video>
-          <p class="has-text-centered">RoMo (Ours)</p>
-        </div>
-      </div>
-
+    <!-- Buttons Section (Centered under video columns) -->
+    <div class="has-text-centered">
+      <button class="button is-primary is-small play-pause-btn" id="play-pause-btn12" style="margin-bottom: 0.25rem;">Play</button>
+      <button class="button is-primary is-small restart-btn" id="restart-btn12" style="margin-bottom: 0.25rem;">Restart</button>
     </div>
   </div>
+</div>
+
+<!-- Row 2 -->
+<div class="columns is-vcentered row">
+  <!-- Image Column -->
+  <div class="column is-7">
+    <img src="static/videos/CasualMotion/stairs.svg" alt="Description">
+    <p class="has-text-centered">camera comparison. GT: <span style="color: #1c9099;">—</span>, Estimate: <span style="color: #c51b8a;">---</span> </p>
+  </div>
+
+  <!-- Video Columns and Buttons Container (Both in the same row) -->
+  <div class="column is-5">
+    <div class="columns">
+      <!-- Video Column 1 -->
+      <div class="column is-6">
+         <p class="has-text-centered">Input Video</p>
+        <video class="row-video" id="row-video13" controls muted loop width="100%">
+          <source src="static/videos/CasualMotion/stairs.mp4" type="video/mp4">
+        </video>
+      </div>
+      
+      <!-- Video Column 2 -->
+      <div class="column is-6">
+	<p class="has-text-centered">RoMo (Ours)</p>
+        <video class="row-video" id="row-video13" controls muted loop width="100%">
+          <source src="static/videos/CasualMotion/stairs_ours.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+
+    <!-- Buttons Section (Centered under video columns) -->
+    <div class="has-text-centered">
+      <button class="button is-primary is-small play-pause-btn" id="play-pause-btn13" style="margin-bottom: 0.25rem;">Play</button>
+      <button class="button is-primary is-small restart-btn" id="restart-btn13" style="margin-bottom: 0.25rem;">Restart</button>
+    </div>
+  </div>
+</div>
+
+      
+<!-- Row 3 -->
+<div class="columns is-vcentered row">
+  <!-- Image Column -->
+  <div class="column is-7">
+    <img src="static/videos/CasualMotion/money.svg" alt="Description">
+    <p class="has-text-centered">camera comparison. GT: <span style="color: #1c9099;">—</span>, Estimate: <span style="color: #c51b8a;">---</span> </p>
+  </div>
+
+  <!-- Video Columns and Buttons Container (Both in the same row) -->
+  <div class="column is-5">
+    <div class="columns">
+      <!-- Video Column 1 -->
+      <div class="column is-6">
+         <p class="has-text-centered">Input Video</p>
+        <video class="row-video" id="row-video14" controls muted loop width="100%">
+          <source src="static/videos/CasualMotion/money.mp4" type="video/mp4">
+        </video>
+      </div>
+      
+      <!-- Video Column 2 -->
+      <div class="column is-6">
+	<p class="has-text-centered">RoMo (Ours)</p>
+        <video class="row-video" id="row-video14" controls muted loop width="100%">
+          <source src="static/videos/CasualMotion/money_ours.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+
+    <!-- Buttons Section (Centered under video columns) -->
+    <div class="has-text-centered">
+      <button class="button is-primary is-small play-pause-btn" id="play-pause-btn14" style="margin-bottom: 0.25rem;">Play</button>
+      <button class="button is-primary is-small restart-btn" id="restart-btn14" style="margin-bottom: 0.25rem;">Restart</button>
+    </div>
+  </div>
+</div>
+ 
+<!-- Row 4 -->
+<div class="columns is-vcentered row">
+  <!-- Image Column -->
+  <div class="column is-7">
+    <img src="static/videos/CasualMotion/umbrella.svg" alt="Description">
+    <p class="has-text-centered">camera comparison. GT: <span style="color: #1c9099;">—</span>, Estimate: <span style="color: #c51b8a;">---</span> </p>
+  </div>
+
+  <!-- Video Columns and Buttons Container (Both in the same row) -->
+  <div class="column is-5">
+    <div class="columns">
+      <!-- Video Column 1 -->
+      <div class="column is-6">
+         <p class="has-text-centered">Input Video</p>
+        <video class="row-video" id="row-video15" controls muted loop width="100%">
+          <source src="static/videos/CasualMotion/umbrella.mp4" type="video/mp4">
+        </video>
+      </div>
+      
+      <!-- Video Column 2 -->
+      <div class="column is-6">
+	<p class="has-text-centered">RoMo (Ours)</p>
+        <video class="row-video" id="row-video15" controls muted loop width="100%">
+          <source src="static/videos/CasualMotion/umbrella_ours.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+
+    <!-- Buttons Section (Centered under video columns) -->
+    <div class="has-text-centered">
+      <button class="button is-primary is-small play-pause-btn" id="play-pause-btn15" style="margin-bottom: 0.25rem;">Play</button>
+      <button class="button is-primary is-small restart-btn" id="restart-btn15" style="margin-bottom: 0.25rem;">Restart</button>
+    </div>
+  </div>
+</div>
+
 </section>
 
 <style>
@@ -570,6 +764,8 @@
     margin-bottom: 2rem; /* Adds space between rows */
   }
 </style>
+
+
 
 
   </body>
