@@ -860,6 +860,54 @@
 </section>
 <!-- End video carousel -->
 
+<!-- Distractor Removal Section -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <!-- Section Title -->
+    <h2 class="title is-3 has-text-centered">Application in Distractor Removal</h2>
+    
+    <!-- Introductory Sentence -->
+    <div class="content">
+      <p class="has-text-justified">
+        Our method can be applied to the task of robust 3D reconstruction in the presence of transient distractors, 
+        when the input set of images is sampled from a video. We show an example of this application on the 
+        <i>patio</i> scene from the 
+        <a href="https://rwn17.github.io/nerf-on-the-go/" target="_blank">NeRF On-the-go</a> dataset.
+      </p>
+    </div>
+
+    <!-- First GIF Row -->
+    <div class="columns is-centered">
+      <div class="column is-full has-text-centered">
+        <figure>
+          <img src="static/videos/patio-masks.gif" alt="RoMo Masks GIF" style="max-width: 100%; border-radius: 8px;">
+          <figcaption>Input video and RoMo masks</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <!-- Follow-up Sentence -->
+    <div class="content">
+      <p class="has-text-justified">
+        Our masks, applied to the photo-metric loss during training a 3D Gaussian Splatting model, 
+        can be as effective as robust training methods such as 
+        <a href="https://spotlesssplats.github.io/" target="_blank">SpotLessSplats</a>.
+      </p>
+    </div>
+
+    <!-- Second GIF Row -->
+    <div class="columns is-centered">
+      <div class="column is-full has-text-centered">
+        <figure>
+          <img src="static/videos/sls-comparison.gif" alt="SLS Comparison GIF" style="max-width: 100%; border-radius: 8px;">
+          <figcaption>Distractor removal qualitative comparison between vanilla 3DGS, SpotLessSplats and RoMo</figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+ 
 
 
   </body>
